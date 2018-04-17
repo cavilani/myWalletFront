@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', 'HomeController@home' )->middleware('auth');
+/*Route::get('/', 'HomeController@home' )->middleware('auth');
 
-Route::post('login', 'LoginController@login');
+Route::post('login', 'LoginController@login');*/
+
+Route::get('/', function(){
+	return view('demo',['title' => 'my app']);
+});
+
+Route::get('/login', function(){
+	return view('login',['title' => 'Login']);
+});
