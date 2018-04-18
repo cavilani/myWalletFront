@@ -20,5 +20,11 @@ Route::get('/', function(){
 });
 
 Route::get('/login', function(){
-	return view('login',['title' => 'Login']);
+	return view('login',['title' => 'Login','scriptsJs' => [URL::asset('js/login.js')]]);
+});
+
+
+Route::post('/loginSubmit', function(){
+
+	return Response::json(["success"]);
 });
